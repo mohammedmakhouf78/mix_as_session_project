@@ -9,10 +9,11 @@ if(isset($_POST['email']))
     if($email == "a@a.com" && $password == "123")
     {
         $_SESSION['email'] = "a@a.com";
+        header('location: ../index.php');
     }
     else
     {
-        header('location: ../login.php');
+        header('location: ../login.php'); // redirect
     }
 }
 else

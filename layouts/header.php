@@ -23,12 +23,16 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
         </li>
+        <?php if(!isset($_SESSION['email'])): ?>
         <li class="nav-item">
           <a class="nav-link" href="../login.php">Login</a>
         </li>
+        <?php endif; ?>
+        <?php if(isset($_SESSION['email'])): ?>
         <li class="nav-item">
-          <a class="nav-link" href="../register.php">Register</a>
+          <a class="nav-link" href="../logout.php">Logout</a>
         </li>
+        <?php endif; ?>
       </ul>
     </div>
   </div>
